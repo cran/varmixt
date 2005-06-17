@@ -99,8 +99,8 @@ function(b,pi,c)
   
  for(j in 1:nmixt)
  {
-Ptmp=t(P1)*pi
-         if(P2[j]>0)
+ Ptmp=t(P1)*pi
+         if((P2[j]>0) & is.na(P2[j])==FALSE)
          {
          P3[,j]<-Ptmp[,j]/P2[j]
          }

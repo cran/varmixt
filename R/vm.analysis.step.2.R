@@ -24,7 +24,7 @@ function(data,n.mixt=NULL,filename=NULL,crit=c("AIC","BIC")[2],stop.crit.1=1.e-6
     }
     else
     {
-       res<-varmixt.an(data,n.mixt)
+       res<-varmixt.an(data,n.mixt,criterion=criterion.2,stop.crit=stop.crit.2)
     }
     if(!is.null(filename))
     {
@@ -33,4 +33,3 @@ function(data,n.mixt=NULL,filename=NULL,crit=c("AIC","BIC")[2],stop.crit.1=1.e-6
     class(res)<-"varmixt.res"
     res
 }
-
